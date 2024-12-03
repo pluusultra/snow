@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+.snow {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.snow__flake {
+    position: relative;
+    top: -1.5rem;
+    animation: snowfall ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes snowfall {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(calc(100vh + 1.5em))
+    }
+}
